@@ -4,7 +4,7 @@ Easily create plain objects with computed keys.
 
 ```
 > obj("a" + 1, "one", "a" + 2, "two")
-{a1: one, a2: two}
+{a1: "one", a2: "two"}
 ```
 
 Mongo has a powerful and expressive query and update language based on
