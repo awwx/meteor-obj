@@ -116,12 +116,19 @@ not compare as equal with `EJSON.equals`.
 To avoid this confusion, input properties with a value of `undefined`
 are treated specially: rather than the key being added to the result,
 instead the key isn’t added at all, or it is deleted if it is already
-present.
+present.  “A key with a value of undefined” is treated as if it meant
+“an object with that key absent”.
 
-What this means in practice is that if you stringify and then parse
-the object returned by `obj` (as what happens if the object is sent
-between the client and server back), you’ll get the same object as the
-original object:
+This may sound strange at first, but it fits in with how `stringify`
+omits keys with `undefined` values, and it also preserves the rule
+that later keys override earlier ones.  Thus it is the best choice for
+passing objects to Meteor methods which are sent between the client
+and server.
+
+All put together, what this means is that if you stringify and then
+parse the object returned by `obj` (as what happens if the object is
+sent between the client and server), you’ll get the same object
+as the original object:
 
 ```
 > obj("a", 1, "b", undefined, "c", 2)
@@ -138,8 +145,8 @@ to say “thank you” is to donate through
 [Gittip](https://www.gittip.com/awwx/).  A weekly contribution of
 25&cent; corresponds to $13 a year.
 
-[Gittip](https://www.gittip.com/about/faq.html) is a platform for
-sustainable crowd-funding.
+Gittip is a [platform for sustainable
+crowd-funding](https://www.gittip.com/about/faq.html).
 
 Help build an ecosystem of well maintained, quality Meteor packages by
 joining the
