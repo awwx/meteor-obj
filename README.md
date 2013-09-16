@@ -142,8 +142,8 @@ as the original object:
 
 If you find this package valuable to you, an easy and effective way to
 support the continued maintenance of this package and the development
-of new useful packages is to donate
-[to me through Gittip](https://www.gittip.com/awwx/).
+of new useful packages is to
+[donate to me through Gittip](https://www.gittip.com/awwx/).
 
 Gittip is a [platform for sustainable
 crowd-funding](https://www.gittip.com/about/faq.html).
