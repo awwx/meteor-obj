@@ -152,7 +152,7 @@ joining the
 [Gittip Meteor Community](https://www.gittip.com/for/meteor/).
 
 
-## For Hire
+## Hire
 
 Need support, debugging, or development for your project?  You can
 [hire me](http://awwx.ws/hire-me) to help out.
