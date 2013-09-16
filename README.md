@@ -140,10 +140,9 @@ as the original object:
 
 ## Donate
 
-If you find this package valuable to you, an easy and effective way to
-support the continued maintenance of this package and the development
-of new and useful packages is to
-[donate through Gittip](https://www.gittip.com/awwx/).
+An easy and effective way to support the continued maintenance of this
+package and the development of new and useful packages is to [donate
+through Gittip](https://www.gittip.com/awwx/).
 
 Gittip is a [platform for sustainable
 crowd-funding](https://www.gittip.com/about/faq.html).
