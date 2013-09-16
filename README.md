@@ -86,10 +86,10 @@ obj("mode", "local", config)
 It iterates through the arguments.  If the current argument is a
 string, it and the next argument is added to the result as a property.
 
-If the curent argument is an object, its properties are added to the
+If the current argument is an object, its properties are added to the
 result.
 
-Later properies override earlier ones.
+Later properties override earlier ones.
 
 A `null` or `undefined` argument is treated like an empty object (that
 is, it is skipped).  This allows an “object” variable to be passed to
@@ -140,10 +140,10 @@ as the original object:
 
 ## Donate
 
-If you find this package is valuable to you, an easy and effective way
-to say “thank you” is to donate through
-[Gittip](https://www.gittip.com/awwx/).  A weekly contribution of
-25&cent; corresponds to $13 a year.
+If you find this package valuable to you, an easy and effective way to
+support the continued maintenance of this package and the development
+of new useful packages is to donate through
+[Gittip](https://www.gittip.com/awwx/).
 
 Gittip is a [platform for sustainable
 crowd-funding](https://www.gittip.com/about/faq.html).
@@ -151,3 +151,9 @@ crowd-funding](https://www.gittip.com/about/faq.html).
 Help build an ecosystem of well maintained, quality Meteor packages by
 joining the
 [Gittip Meteor Community](https://www.gittip.com/for/meteor/).
+
+
+## For Hire
+
+Need support, debugging, or development for your project?  You can
+[hire me](http://awwx.ws/hire-me) to help out.
