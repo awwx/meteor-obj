@@ -61,14 +61,22 @@ their properties are copied onto the result.  Thus saying
 [extend](http://underscorejs.org/#extend) with an empty source object
 like this: `_.extend({}, o1, o2, o3)`.
 
-This allows properties to be copied from a source object and then
-extended / overridden with specific properties:
+This allows you to easily mix the JavaScript `{...}` syntax with
+computed keys:
+
+```
+> obj({_id: "ab56"}, "memos." + 3 + ".by", "shipping")
+{_id: "ab56", "memos.3.by": "shipping"}
+```
+
+You can also copy a source object and then extended or override it
+with specific properties:
 
 ```
 obj(config, "safe", true)
 ```
 
-or for defaults to be specified first:
+or first specify defaults:
 
 ```
 obj("mode", "local", config)
@@ -105,19 +113,20 @@ with an `undefined` value are omitted:
 
 ```
 > EJSON.stringify({a: 1, b: undefined, c: 2})
-"{a: 1, c: 2}"
+'{"a":1,"c":2}'
 ```
 
-This can cause confusion because A) a value sent from the client to
-the server or vice versa will arrive as a different object than the
-one sent, and B) two object that look the same when stringified will
-not compare as equal with `EJSON.equals`.
+Having properties with undefined values can cause confusion because A)
+an object sent from the client to the server or vice versa will arrive
+as a different object than the one sent, and B) two objects that look
+the same when stringified will not compare as equal with
+`EJSON.equals`.
 
 To avoid this confusion, input properties with a value of `undefined`
 are treated specially: rather than the key being added to the result,
 instead the key isn’t added at all, or it is deleted if it is already
 present.  “A key with a value of undefined” is treated as if it meant
-“an object with that key absent”.
+“an object with that key absent” or “remove that key”.
 
 This may sound strange at first, but it fits in with how `stringify`
 omits keys with `undefined` values, and it also preserves the rule
